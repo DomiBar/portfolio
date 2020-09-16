@@ -1,0 +1,15 @@
+{% extends "infos/base.html" %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+<a href="/infos" class="btn btn-outline-info">Home</a>
+<button type="button" class="btn btn-primary" disabled>About me</button>
+<a href="/infos/contact" class="btn btn-outline-info">Contact</a>
+<div class="col-lg-12 text-left">
+    {% load static %}
+    <img src="{% static "photo.jpg" %}" class="rounded float-left" alt="Moje zdjęcie" width="100">
+    <h1 class="mt-5">Cześć</h1>
+    <p class="lead">Nazywam się Dominik Baran i uczę się programować z frameworkiem Django</p>
+</div>
+{% endblock content %}
