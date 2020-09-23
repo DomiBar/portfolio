@@ -4,17 +4,29 @@ from django.template import loader
 
 # Create your views here.
 
+
 def homepage(request):
-    t = loader.get_template("infos/homepage.html")
     c = {"title": "home"}
-    return HttpResponse(t.render(c))
+    return render(
+        request=request,
+        template_name="infos/homepage.html",
+        context=c
+    )
+
 
 def me(request):
-    t = loader.get_template("infos/me.html")
     c = {"title": "About me"}
-    return HttpResponse(t.render(c))
+    return render(
+        request=request,
+        template_name="infos/me.html",
+        context=c
+    )
+
 
 def contact(request):
-    t = loader.get_template("infos/contact.html")
     c = {"title": "Contact"}
-    return HttpResponse(t.render(c))
+    return render(
+        request=request,
+        template_name="infos/contact.html",
+        context=c
+    )
